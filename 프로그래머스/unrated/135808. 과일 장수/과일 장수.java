@@ -5,9 +5,12 @@ class Solution {
         int answer = 0;
         Arrays.sort(score); //  배열 정렬
         
-        for(int i=score.length-1; i >= 0; i--) {
-            if((score.length - i) % m == 0) answer += score[i] * m;
+        for(int i = 0; i < score.length; i++) {
+            if((score.length - i) % m == 0) {
+                answer += score[i] * m;
+            }
         }
+        
         return answer;
     }
 }
